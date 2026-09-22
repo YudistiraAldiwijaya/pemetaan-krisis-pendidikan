@@ -56,13 +56,13 @@ with col1:
     
     # Notifikasi Kebijakan
     if klaster_aktif == 3:
-        st.error("**⚠️ STATUS: DARURAT GANDA**\n\nWilayah ini menderita krisis ekstrem berupa kelangkaan Rombel sekaligus tingkat kerusakan sekolah yang tinggi. Prioritas utama untuk relaksasi syarat JTM 24 jam.")
+        st.error("**⚠️ STATUS: DARURAT GANDA**\n\nPrioritas utama untuk relaksasi syarat JTM")
     elif klaster_aktif == 1:
-        st.success("**✅ STATUS: BERKECUPAN (UNGGUL)**\n\nKapasitas beban kerja guru dan kelayakan infrastruktur di wilayah ini terpelihara di atas rata-rata nasional.")
+        st.success("**✅ STATUS: BERKECUPAN (UNGGUL)**\n\nDapat diterapkan JTM")
     elif klaster_aktif == 2:
-        st.warning("**⚠️ STATUS: KELANGKAAN SEKOLAH (MENENGAH)**\n\nRombel cenderung padat dan rasio kelas per guru tinggi, namun tingkat ketersediaan sekolah rendah. Fokuskan pada pendirian Unit Sekolah Baru (USB).")
+        st.warning("**⚠️ STATUS: KELANGKAAN SEKOLAH (MENENGAH)**\n\nFokuskan pada perbaikan dan/atau pendirian Unit Sekolah/Kelas Baru.")
     elif klaster_aktif == 4:
-        st.info("**ℹ️ STATUS: KRISIS ROMBEL RINGAN**\n\nTerdapat kelangkaan rombel dan kerusakan infrastruktur namun belum pada tahap ekstrem. Perlu pemantauan kapasitas.")
+        st.info("**ℹ️ STATUS: KRISIS ROMBEL RINGAN**\n\nPerlu pemantauan.")
 
     # FITUR TAMBAHAN 3: TOMBOL DOWNLOAD DATA
     st.markdown("<br>", unsafe_allow_html=True)
@@ -85,7 +85,7 @@ with col2:
         data_terpilih['V4_Penyerapan_Negeri_Scaled'],
         data_terpilih['V5_Tingkat_Kerusakan_Scaled']
     ]
-    label_indikator = ['Kapasitas Rombel', 'Rasio Kelas/Guru', 'Ketersediaan Sekolah', 'Penyerapan Negeri', 'Kerusakan Sekolah']
+    label_indikator = ['Kapasitas Rombel', 'Rasio Rombel/Guru', 'Ketersediaan Sekolah', 'Penyerapan Negeri', 'Kerusakan Sekolah']
     
     df_plot = pd.DataFrame({'Indikator': label_indikator, 'Z-Score': nilai_fitur})
     
