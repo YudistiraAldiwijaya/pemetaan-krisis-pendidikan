@@ -138,7 +138,7 @@ with col1:
         pc2 = data_terpilih['PC2']
         
         if klaster_aktif == 1:
-            teks_pca = f"Nilai skor gabungan PC1 ({pc1:.2f}) dan PC2 ({pc2:.2f}) yang mendekati angka nol (0) menunjukkan bahwa wilayah ini memiliki karakteristik yang sangat wajar tanpa ada masalah atau ketimpangan yang ekstrem.\n\n**Kesimpulan Sistem:** Secara keseluruhan, sistem pendidikan tingkat atas di wilayah ini tergolong aman dan normal. Kebijakan wajib 24 jam JTM dapat diterapkan secara seragam tanpa memerlukan perlakuan khusus dari pemerintah pusat."
+            teks_pca = f"Nilai skor gabungan PC1 ({pc1:.2f}) dan PC2 ({pc2:.2f}) yang mendekati/dibawah angka nol (0) menunjukkan bahwa wilayah ini memiliki karakteristik yang sangat wajar tanpa ada masalah atau ketimpangan yang ekstrem.\n\n**Kesimpulan Sistem:** Secara keseluruhan, sistem pendidikan tingkat atas di wilayah ini tergolong aman dan normal. Kebijakan wajib 24 jam JTM dapat diterapkan secara seragam tanpa memerlukan perlakuan khusus dari pemerintah pusat."
         elif klaster_aktif == 2:
             teks_pca = f"Skor PC1 ({pc1:.2f}) dan PC2 ({pc2:.2f}) menunjukkan pergeseran pola yang sangat berbeda dari wilayah lain. Hal ini dipicu oleh ketimpangan antara padatnya siswa di sekolah negeri dengan sedikitnya jumlah bangunan sekolah negeri yang tersedia.\n\n**Kesimpulan Sistem:** Angka pemenuhan JTM yang tinggi di wilayah ini adalah hasil dari daya tampung negeri yang terbatas (memaksa siswa ke swasta). Pemerintah perlu sangat berhati-hati sebelum memutuskan membangun sekolah negeri baru agar tidak mematikan sekolah swasta yang sudah berjalan."
         elif klaster_aktif == 3:
